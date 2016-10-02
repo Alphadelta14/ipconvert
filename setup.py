@@ -37,7 +37,13 @@ setup(
     },
     install_requires=[
         'mysqlclient>=1.3.7',
+        'six',
     ],
+    entry_points={
+        'console_scripts': [
+            'ipconvert=ipconvert.cli:main'
+        ],
+    },
     packages=find_packages(),
     include_package_data=False,  # Update MANIFEST.in if changed
     classifiers=[
